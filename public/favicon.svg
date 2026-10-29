@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title">
+  <title id="title">AAT</title>
+  <rect x="3" y="3" width="58" height="58" rx="12" fill="#1f0b4b" stroke="#ff3d94" stroke-width="2" />
+  <path d="M10 19V10h9M54 45v9h-9" fill="none" stroke="#b5307e" stroke-width="2" />
+  <text x="32" y="39" fill="#fbf8ff" font-family="Arial, sans-serif" font-size="20" font-weight="700" text-anchor="middle">AAT</text>
+  <circle cx="49" cy="17" r="2" fill="#ff3d94" />
+</svg>

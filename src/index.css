@@ -1,13 +1,96 @@
+:root {
+  --color-bg: #c9bddb;
+  --color-surface: #d7cde5;
+  --color-text: #1f0b4b;
+  --color-muted: #3f1c6d;
+  --color-line: rgba(35, 14, 61, 0.2);
+  --color-violet: #6a2a98;
+  --color-pink: #b5307e;
+  --color-magenta: #b5307e;
+  --color-cyan: var(--color-violet);
+  --color-lime: var(--color-pink);
+  --color-line-soft: rgba(35, 14, 61, 0.1);
+  --font-display: 'Space Grotesk', sans-serif;
+  --font-mono: 'Space Mono', monospace;
+  color-scheme: light;
+}
+
+:root[data-theme='dark'] {
+  --color-bg: #15151d;
+  --color-surface: #20202b;
+  --color-text: #f2edf5;
+  --color-muted: #c1b7c8;
+  --color-line: rgba(232, 216, 245, 0.2);
+  --color-violet: #c2a1ff;
+  --color-pink: #ff83bd;
+  --color-magenta: #ff69ad;
+  --color-cyan: #7edbd2;
+  --color-lime: #7edbd2;
+  --color-line-soft: rgba(232, 216, 245, 0.1);
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-width: 320px;
+  background: var(--color-bg);
+  scroll-behavior: smooth;
+}
+
 body {
+  min-width: 320px;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  color: var(--color-text);
+  background:
+    radial-gradient(ellipse at 86% 16%, rgba(106, 42, 152, 0.2), transparent 30rem),
+    radial-gradient(ellipse at 3% 60%, rgba(255, 61, 148, 0.12), transparent 32rem),
+    var(--color-bg);
+  font-family: var(--font-display);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+:root[data-theme='dark'] body {
+  background:
+    radial-gradient(ellipse at 86% 16%, rgba(126, 219, 210, 0.11), transparent 30rem),
+    radial-gradient(ellipse at 3% 60%, rgba(255, 105, 173, 0.1), transparent 32rem),
+    var(--color-bg);
+}
+
+body::before {
+  position: fixed;
+  z-index: -1;
+  inset: 0;
+  background-image: linear-gradient(rgba(31, 11, 75, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(31, 11, 75, 0.06) 1px, transparent 1px);
+  background-size: 48px 48px;
+  content: '';
+  pointer-events: none;
+}
+
+::selection {
+  color: #ffffff;
+  background: var(--color-violet);
+}
+
+a {
+  color: inherit;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+code,
+.mono {
+  font-family: var(--font-mono);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-pink);
+  outline-offset: 4px;
 }

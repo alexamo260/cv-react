@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-labelledby="title">
+  <title id="title">Monograma AAT</title>
+  <rect x="12" y="12" width="216" height="216" rx="34" fill="#1f0b4b" stroke="#ff3d94" stroke-width="3" />
+  <path d="M34 67V34h33M206 173v33h-33" fill="none" stroke="#b5307e" stroke-width="4" />
+  <path d="M45 181h150" stroke="#6a2a98" stroke-opacity=".9" stroke-width="1" />
+  <text x="120" y="145" fill="#fbf8ff" font-family="Space Grotesk, sans-serif" font-size="72" font-weight="700" text-anchor="middle">AAT</text>
+  <circle cx="186" cy="72" r="5" fill="#ff3d94" />
+  <path d="M54 196h42" stroke="#b5307e" stroke-width="3" />
+</svg>
