@@ -15,6 +15,7 @@ export const HeaderNav = () => {
                     <small>WEB DEVELOPER <span>-</span> PORTFOLIO</small>
                 </span>
             </NavLink>
+            <ShareModal />
             <button
                 className="mobile-menu-toggle"
                 type="button"
@@ -27,7 +28,6 @@ export const HeaderNav = () => {
             <span />
             <span />
             </button>
-            <ShareModal />
         </div>
         <nav id="primary-navigation" className={isMenuMobile ? 'is-open' : ''} aria-label="Navegación principal">
             <ul>
