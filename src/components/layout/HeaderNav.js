@@ -1,10 +1,9 @@
 import React, { useState } from 'react'
 import { NavLink } from 'react-router-dom'
-import { useTheme } from '../../context/ThemeContext'
+import { ShareModal } from './ShareModal'
 
 export const HeaderNav = () => {
     const [isMenuMobile, setIsMenuMobile] = useState(false)
-    const { theme, toggleTheme } = useTheme()
 
   return (
     <header className="header">
@@ -28,15 +27,7 @@ export const HeaderNav = () => {
             <span />
             <span />
             </button>
-            <button
-                className="theme-toggle"
-                type="button"
-                aria-label={`Cambiar a tema ${theme === 'light' ? 'oscuro' : 'claro'}`}
-                title={`Cambiar a tema ${theme === 'light' ? 'oscuro' : 'claro'}`}
-                onClick={toggleTheme}
-            >
-                <span aria-hidden="true">{theme === 'light' ? '☾' : '☼'}</span>
-            </button>
+            <ShareModal />
         </div>
         <nav id="primary-navigation" className={isMenuMobile ? 'is-open' : ''} aria-label="Navegación principal">
             <ul>

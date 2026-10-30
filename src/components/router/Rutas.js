@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react'
-import { Routes, Route, BrowserRouter, useLocation } from 'react-router-dom'
+import { Routes, Route, BrowserRouter, Navigate, useLocation } from 'react-router-dom'
 import { Footer } from '../layout/Footer'
 import { HeaderNav } from '../layout/HeaderNav'
 import { Inicio } from '../Inicio'
@@ -26,6 +26,7 @@ const ContenidoRutas = () => {
           <Route path="/servicios" element={<Servicios />} />
           <Route path="/curriculum" element={<Curriculum />} />
           <Route path="/contacto" element={<Contacto />} />
+          <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </main>
       <Footer />

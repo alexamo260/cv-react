@@ -1,8 +1,8 @@
 import React from 'react'
+import { useTheme } from '../../context/ThemeContext'
 
 export const Footer = () => {
-
-    const currentYear = new Date().getFullYear();
+  const { theme, toggleTheme } = useTheme()
 
   return (
     <footer className="footer">
@@ -18,7 +18,17 @@ export const Footer = () => {
           <span aria-hidden="true">in</span>
         </button>
       </div>
-      <p>{currentYear}</p>
+      <div className="footer-date">
+        <button
+          className="theme-toggle"
+          type="button"
+          aria-label={`Cambiar a tema ${theme === 'light' ? 'oscuro' : 'claro'}`}
+          title={`Cambiar a tema ${theme === 'light' ? 'oscuro' : 'claro'}`}
+          onClick={toggleTheme}
+        >
+          <span aria-hidden="true">{theme === 'light' ? '☾' : '☼'}</span>
+        </button>
+      </div>
     </footer>
   )
 }
